@@ -1,0 +1,41 @@
+server:
+  ip: localhost
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3305/houtaixinxi?serverTimezone=GMT%2b8
+    username: root
+    password: root
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 500MB
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+files:
+  upload:
+    path: D:/deno2/files/
+    path1: D:/deno2/files1/
+
+#fabric:
+#  networkConnectionConfigPath: src/main/resources/Connection.json
+#  mspId: Org1MSP
+#  certificatePath: src/main/resources/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem
+#  privateKeyPath: src/main/resources/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/priv_sk
+#  tlsCertPath: src/main/resources/crypto-config/peerOrganizations/org1.example.com/users/User1@org1.example.com/tls/ca.crt
+#  channel: mychannel
+
+logging:
+  level:
+    org.hyperledger: trace
+
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.XinxiMapper">
+
+    <update id="updata">
+        update user
+
+        <set>
+            <if test = "name != null">
+                name = #{name},
+            </if>
+            <if test = "grade != null">
+                grade = #{grade},
+            </if>
+            <if test = "num != null">
+                num = #{num},
+            </if>
+            <if test = "doctor != null">
+                doctor = #{doctor},
+            </if>
+            <if test = "main != null">
+                main = #{main},
+            </if>
+            <if test = "year != null">
+                year = #{year},
+            </if>
+            <if test = "country != null">
+                country = #{country},
+            </if>
+            <if test = "type != null">
+                type = #{type}
+            </if>
+        </set>
+
+        <where>
+            id = #{id}
+        </where>
+
+    </update>
+</mapper>

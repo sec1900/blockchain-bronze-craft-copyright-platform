@@ -1,0 +1,17 @@
+package com.example.demo.service;
+
+import com.example.demo.entity.Shensu;
+import com.baomidou.mybatisplus.extension.service.IService;
+
+/**
+ * <p>
+ *  服务类
+ * </p>
+ *
+ * @author baomidou
+ * @since 2022-10-04
+ */
+public interface IShensuService extends IService<Shensu> {
+
+    boolean saveXinxi(Shensu shensu);
+}
